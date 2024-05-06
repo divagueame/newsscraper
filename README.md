@@ -19,3 +19,6 @@ We will measure the performance of the provided solution and your ability to tes
 
 ## 1. Set up a new Rails app with Postgresql and Tailwind
 
+## 2. Set up Entry model to represent the scraped data
+Each one of the entries scraped from the news will be stored as an Entry in the database. 
+All entries have a title and position, optionally they might also have the number of comments and their score. This is also represented on the schema and the validations on the Entry model.
