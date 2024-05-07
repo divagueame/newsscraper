@@ -45,3 +45,5 @@ Basic styling of the entries partial and add the 'inline_svg' gem and some asset
 ## 12. Test Entry model validations
 
 ## 13. Allow refresh of entries to refetch the scraped news
+
+## 14. Add links to sort and refresh the data
