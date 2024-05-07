@@ -54,6 +54,8 @@ Basic styling of the entries partial and add the 'inline_svg' gem and some asset
 
 15. Add demo GIF
 
+16. Show number of results when a query is present
+
 ## Test suite
 ```bash
 ➜  newsscraper git:(main) ✗ bundle exec rspec

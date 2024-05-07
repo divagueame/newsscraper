@@ -20,7 +20,12 @@
     <% end %>
   </div>
 
-  <h1 class="font-bold text-4xl mb-4">Latest news from Hacker News</h1>
+  <h1 class="font-bold text-4xl mb-4">
+    Latest news from Hacker News
+    <% if !params.except(:controller, :action, :refresh).blank? %>
+      <span class="text-sky-900">(<%= @entries.count %>)</span>
+    <% end %>
+  </h1>
   <div id="entries" class="min-w-full flex flex-col gap-2">
     <% @entries.each do |entry| %>
       <%= render entry %>
