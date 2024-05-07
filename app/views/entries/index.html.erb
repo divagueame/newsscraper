@@ -1,22 +1,21 @@
 <div class="w-full mb-8">
   <div class="flex flex-col md:flex-row items-stretch justify-end mb-12 gap-3 text-sm">
     <%= link_to entries_path, class: "#{ params.except(:controller, :action, :refresh).blank? ? "outline" : ""} outline-1 outline-green-600 rounded-lg py-2 px-4 bg-green-300 hover:bg-purple-200 inline-flex items-center gap-2 font-medium justify-center" do %>
-      <% inline_svg 'sort', class: "w-8 h-8" %>
       All news
     <% end %>
 
     <%= link_to entries_path(order_by: :comments_desc, min_words_count: 6), class: "#{ params[:min_words_count].present? ? "outline" : ""} outline-1 outline-purple-600 rounded-lg py-2 px-4 bg-purple-300 hover:bg-purple-200 inline-flex items-center gap-2 font-medium justify-center" do %>
-      <%= inline_svg 'sort', class: "w-8 h-8" %>
+      <%= inline_svg_tag 'sort.svg', class: "w-5 h-5" %>
       By comments & Words +5
     <% end %>
 
     <%= link_to entries_path(order_by: :points_desc, max_words_count: 5), class:  "#{ params[:max_words_count].present? ? "outline" : ""} outline-1 outline-purple-600 rounded-lg py-2 px-4 bg-purple-300 hover:bg-purple-200 inline-flex items-center gap-2 font-medium justify-center" do %>
-      <%= inline_svg 'sort', class: "w-8 h-8" %>
+      <%= inline_svg_tag 'sort.svg', class: "w-5 h-5" %>
       By points & Words 6-
     <% end %>
 
     <%= link_to entries_path(refresh: true), class: "rounded-lg py-2 px-4 bg-orange-100 hover:bg-orange-200 inline-flex items-center gap-2 font-medium justify-center" do %>
-      <%= inline_svg 'refresh', class: "w-8 h-8" %>
+      <%= inline_svg_tag 'refresh.svg', class: "w-7 h-7" %>
       Refresh news
     <% end %>
   </div>
