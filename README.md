@@ -25,3 +25,5 @@ All entries have a title and position, optionally they might also have the numbe
 
 ## 3. Style entries partial + Add svg files
 Basic styling of the entries partial and add the 'inline_svg' gem and some assets to be used in the application.
+
+## 4. Add footer + Github link to repository

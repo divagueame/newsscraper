@@ -12,8 +12,18 @@
   </head>
 
   <body class="bg-sky-50 flex flex-col min-h-svh">
+    <%= link_to "https://github.com/divagueame/newsscraper", class:"p-1 top-0 left-0 absolute hover:opacity-75" do %>
+      <%= inline_svg_tag "github.svg", class: "w-5 h-6" %>
+    <% end %>
+
     <main class="container mx-auto mt-8 px-5 flex">
       <%= yield %>
     </main>
+    <footer class="mt-auto p-1 bg-white flex flex-col md:flex-row justify-center items-center gap-8">
+      <%= link_to "https://github.com/divagueame/newsscraper", class:"bg-white py-2 px-8 rounded flex gap-8 items-center text-slate-600 hover:text-black" do %>
+        Martin Arce 2024
+        <%= inline_svg_tag "github.svg", class: "w-5 h-6" %>
+      <% end %>
+    </footer>
   </body>
 </html>
