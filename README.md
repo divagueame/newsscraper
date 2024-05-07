@@ -33,3 +33,5 @@ Basic styling of the entries partial and add the 'inline_svg' gem and some asset
 ## 6. Set up tests for 'EntriesController'
 
 ## 7. Add 'FindEntries' query object
+
+## 8. Set up Entry factory bot
