@@ -12,5 +12,16 @@ RSpec.describe FindEntries do
       results = FindEntries.new.call(params)
       expect(results).to match_array([entry1, entry2, entry3])
     end
+    it 'sorts by the specified order_by comments parameter' do
+      params = { order_by: 'comments_desc' }
+      results = FindEntries.new.call(params)
+      expect(results).to eq([entry3, entry1, entry2])
+    end
+
+    it 'sorts by the specified order_by points parameter' do
+      params = { order_by: 'points_desc' }
+      results = FindEntries.new.call(params)
+      expect(results).to eq([entry3, entry2, entry1])
+    end
   end
 end

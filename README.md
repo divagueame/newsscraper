@@ -37,3 +37,5 @@ Basic styling of the entries partial and add the 'inline_svg' gem and some asset
 ## 8. Set up Entry factory bot
 
 ## 9. Add ScrapeNewsJob 
+
+## 10. Add sorting to 'FindEntries' query object
