@@ -43,3 +43,5 @@ Basic styling of the entries partial and add the 'inline_svg' gem and some asset
 ## 11. Add scopes -> :with_title_word_count_greater_than & :with_title_word_count_less_than to Entry model
 
 ## 12. Test Entry model validations
+
+## 13. Allow refresh of entries to refetch the scraped news
