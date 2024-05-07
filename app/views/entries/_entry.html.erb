@@ -1,22 +1,14 @@
-<div id="<%= dom_id entry %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= entry.title %>
-  </p>
+<div class="p-4 shadow rounded-sm bg-white flex flex-col sm:flex-row justify-between items-center gap-4" id="<%= dom_id entry %>">
+  <h1 class="text-lg font-bold text-slate-900"><%= entry.position %> - <%= entry.title %></h1>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Position:</strong>
-    <%= entry.position %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Comments count:</strong>
-    <%= entry.comments_count %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Points:</strong>
-    <%= entry.points %>
-  </p>
-
+  <div class="flex sm:flex-col gap-1 text-slate-600">
+    <span class="flex items-center gap-1">
+      <%= inline_svg 'star', class: "w-4 h-4 inline-block" %>
+      <%= entry.points %>
+    </span>
+    <span class="flex items-center gap-1">
+      <%= inline_svg 'comment', class: "w-4 h-4 inline-block" %>
+      <%= entry.comments %>
+    </span>
+  </div>
 </div>

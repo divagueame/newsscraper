@@ -22,3 +22,6 @@ We will measure the performance of the provided solution and your ability to tes
 ## 2. Set up Entry model to represent the scraped data
 Each one of the entries scraped from the news will be stored as an Entry in the database. 
 All entries have a title and position, optionally they might also have the number of comments and their score. This is also represented on the schema and the validations on the Entry model.
+
+## 3. Style entries partial + Add svg files
+Basic styling of the entries partial and add the 'inline_svg' gem and some assets to be used in the application.

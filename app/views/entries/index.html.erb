@@ -1,15 +1,15 @@
-<div class="w-full">
+<div class="w-full mb-8">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <% content_for :title, "Scraped news from Hacker News" %>
 
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Entries</h1>
   </div>
 
-  <div id="entries" class="min-w-full">
+  <h1 class="font-bold text-4xl mb-4">Latest news from Hacker News</h1>
+  <div id="entries" class="min-w-full flex flex-col gap-2">
     <% @entries.each do |entry| %>
       <%= render entry %>
     <% end %>
