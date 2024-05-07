@@ -29,3 +29,5 @@ Basic styling of the entries partial and add the 'inline_svg' gem and some asset
 ## 4. Add footer + Github link to repository
 
 ## 5. Add RSpec gem + Factory Bot Gem
+
+## 6. Set up tests for 'EntriesController'
