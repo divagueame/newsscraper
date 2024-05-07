@@ -19,4 +19,17 @@ RSpec.describe EntriesController, type: :controller do
       end
     end
 
+    context 'when filtering by comments and min words count' do
+      it 'returns a 200 status code' do
+        get :index, params: { order_by: :comments_desc, min_words_count: 6 }
+        expect(response).to have_http_status(200)
+      end
+    end
+
+    context 'when filtering by points and max words count' do
+      it 'returns a 200 status code ' do
+        get :index, params: { order_by: :points_desc, max_words_count: 5 }
+        expect(response).to have_http_status(200)
+      end
+    end
 end

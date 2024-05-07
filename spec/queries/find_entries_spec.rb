@@ -12,6 +12,24 @@ RSpec.describe FindEntries do
       results = FindEntries.new.call(params)
       expect(results).to match_array([entry1, entry2, entry3])
     end
+
+    it 'filters by min_words_count' do
+      params = { min_words_count: 2 }
+      results = FindEntries.new.call(params)
+      expect(results).to contain_exactly(entry2)
+    end
+
+    it 'filters by max_words_count' do
+      params = { max_words_count: 2 }
+      results = FindEntries.new.call(params)
+      expect(results).to contain_exactly(entry3)
+    end
+
+    it 'sorts by position in ascending order by default' do
+      results = FindEntries.new.call
+      expect(results).to eq([entry1, entry2, entry3])
+    end
+
     it 'sorts by the specified order_by comments parameter' do
       params = { order_by: 'comments_desc' }
       results = FindEntries.new.call(params)
