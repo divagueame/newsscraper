@@ -1,4 +1,35 @@
 RSpec.describe Entry, type: :model do
+  describe 'validations' do
+    it 'is valid with valid attributes' do
+      entry = Entry.new(title: 'Example Title', position: 1, comments: 'Example Comments', points: 10)
+      expect(entry).to be_valid
+    end
+
+    it 'is not valid without a title' do
+      entry = Entry.new(position: 1, comments: 'Example Comments', points: 10)
+      expect(entry).not_to be_valid
+      expect(entry.errors[:title]).to include("can't be blank")
+    end
+
+    it 'is not valid without a position' do
+      entry = Entry.new(title: 'Example Title', comments: 'Example Comments', points: 10)
+      expect(entry).not_to be_valid
+      expect(entry.errors[:position]).to include("can't be blank")
+    end
+
+    it 'is is valid without comments and set 0 as value' do
+      entry = Entry.new(title: 'Example Title', position: 1, points: 10)
+      expect(entry).to be_valid
+      expect(entry.comments).to be(0)
+    end
+
+    it 'is is valid without points and set 0 as value' do
+      entry = Entry.new(title: 'Example Title', position: 1, comments: 10)
+      expect(entry).to be_valid
+      expect(entry.points).to be(0)
+    end
+  end
+
   describe 'constants' do
     it 'defines ORDER_BY constant' do
       expect(Entry.const_defined?(:ORDER_BY)).to be_truthy
